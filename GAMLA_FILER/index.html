@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <h1>Cineasternas filmklubb</h1>
+
+      <img
+        src="bilder/uggla.jpg"
+        alt="uggleunge med glasögon"
+        height="612"
+        width="612"
+      />
+    </header>
+
+    <!-- navigering med länkar till de olika sidorna -->
+    <nav>
+      <ul class="sidolankar">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sokresultat.html">Sökresultat</a></li>
+        <li><a href="merinfo.html">Mer info</a></li>
+        <li><a href="medlemssida.html">Medlemssida</a></li>
+      </ul>
+    </nav>
+
+    <!-- huvuddel med sökfunktion och där top tio-filmer visas, innehåller en article och en aside -->
+
+    <div class="content">
+      <!-- Sökformulär -->
+      <form id="startsida-sokformular">
+        <h2>Sök en film</h2>
+        <!-- label och ruta för att skriva in sökord -->
+        <div class="sokruta">
+          <label for="sokord">Sökord</label>
+          <input type="text" id="sokord" />
+        </div>
+
+        <!-- Knapp för att skicka -->
+        <button type="submit">Sök</button>
+      </form>
+
+      <!-- Article de tre bästa filmerna -->
+      <article id="startsida-article">
+        <h2>Populäraste filmerna just nu</h2>
+
+        <section>
+          <h3>1. Lejonet attackerar</h3>
+
+          <img
+            id="lejonbild"
+            src="bilder/lejon.jpg"
+            alt="gullig lejonunge"
+            height="500"
+            width="500"
+          />
+
+          <p class="tagline">"Skenet kan bedra"</p>
+        </section>
+
+        <section>
+          <h3>2. Mysteriet med talgoxen</h3>
+
+          <img
+            id="talgoxebild"
+            src="bilder/talgoxe.jpg"
+            alt="tecknad tufsig småfågel"
+            width="500"
+            height="500"
+          />
+
+          <p class="tagline">"Mer spännande kan det inte bli"</p>
+        </section>
+
+        <section>
+          <h3>3. Älgen simmar söderut</h3>
+
+          <img
+            id="algbild"
+            src="bilder/algbild.jpg"
+            alt="älg"
+            height="500"
+            width="500"
+          />
+
+          <p class="tagline">"Det visste du inte om Hälge"</p>
+        </section>
+      </article>
+
+      <!-- Aside lista på top 10-filmer -->
+      <aside id="startsida-aside">
+        <h2>Top 10</h2>
+
+        <ol>
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Lejonet attackerar</p>
+
+              <p class="tagline kort-tagline">"Skenet kan bedra"</p>
+              <p class="kort-betyg">Betyg: 5,0</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta rosta_minus_1">-1</button>
+                <button class="rosta rosta_1">1</button>
+                <button class="rosta rosta_2">2</button>
+                <button class="rosta rosta_3">3</button>
+                <button class="rosta rosta_4">4</button>
+                <button class="rosta rosta_5">5</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Älgen simmar söderut</p>
+
+              <p class="tagline kort-tagline">"Det visste du inte om Hälge"</p>
+              <p class="kort-betyg">Betyg: 4,8</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Mysteriet med talgoxen</p>
+
+              <p class="tagline kort-tagline">
+                "Mer spännande kan det inte bli"
+              </p>
+              <p class="kort-betyg">Betyg: 4,2</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Nattugglornas julafton</p>
+
+              <p class="tagline kort-tagline">"Uppesittarkväll för ugglor"</p>
+              <p class="kort-betyg">Betyg: 3,9</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Sparvhökens återkomst</p>
+
+              <p class="tagline kort-tagline">"Se upp i skogen"</p>
+              <p class="kort-betyg">Betyg: 3,7</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Emuerna dansar samba</p>
+
+              <p class="tagline kort-tagline">"Det svänger ju"</p>
+              <p class="kort-betyg">Betyg: 3,5</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Strandpiparen piper vidare</p>
+
+              <p class="tagline kort-tagline">
+                "En tårdrypande berättelse från sandstranden"
+              </p>
+              <p class="kort-betyg">Betyg: 3,4</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Tranorna duggar tätt</p>
+
+              <p class="tagline kort-tagline">
+                "När långbenen tog över världen"
+              </p>
+              <p class="kort-betyg">Betyg: 3,1</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Tigern som tyckte om tallkottar</p>
+
+              <p class="tagline kort-tagline">
+                "Bara för att man är randig behöver man inte jaga antiloper"
+              </p>
+              <p class="kort-betyg">Betyg: 3,0</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="kort">
+              <p class="kort-titel">Det händer när du flaxar</p>
+
+              <p class="tagline kort-tagline">
+                "Instruktioner för alla som vill lära sig flyga"
+              </p>
+              <p class="kort-betyg">Betyg: 2,5</p>
+
+              <div class="kort-betygsattingsmodul">
+                <p class="kort-betygsatt">Betygsätt</p>
+                <button class="rosta">-1</button>
+                <button class="rosta">1</button>
+                <button class="rosta">2</button>
+                <button class="rosta">3</button>
+                <button class="rosta">4</button>
+                <button class="rosta">5</button>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </aside>
+    </div>
+
+    <!-- footer med kontaktuppgifter och bildreferens -->
+    <footer>
+      <div class="footer-kontakt">
+        <div class="footer-ikonochtext">
+          <img src="bilder/telefon.jpg" alt="telefon" width="64" height="64" />
+          <p>073 1112223</p>
+        </div>
+
+        <div class="footer-ikonochtext">
+          <img src="bilder/brev.jpg" alt="brev" width="64" height="64" />
+          <p>info@filmklubb.se</p>
+        </div>
+      </div>
+
+      <!-- separat div för att kunna ange separat stil för sista raden i footern -->
+      <div class="footer-bildreferens">
+        <p>
+          Bilder och ikoner är hämtade från unsplash.com respektive freeicons.io
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/index.js" type="module" defer></script>
+  </body>
+</html>

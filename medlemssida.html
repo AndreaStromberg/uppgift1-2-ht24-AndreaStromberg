@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- importerar ett script från font awsome för att kunna använda ikoner därifrån -->
+    <script
+      src="https://kit.fontawesome.com/7540058e1a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <img
+        src="bilder/uggla.jpg"
+        alt="uggleunge med glasögon"
+        height="612"
+        width="612"
+      />
+      <h1>Cineasternas filmklubb</h1>
+    </header>
+
+    <!-- navigering med länkar till de olika sidorna -->
+    <nav>
+      <ul class="sidolankar">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sokresultat.html">Sökresultat</a></li>
+        <li><a href="merinfo.html">Mer info</a></li>
+        <li><a href="medlemssida.html">Medlemssida</a></li>
+      </ul>
+    </nav>
+
+    <!-- huvudinnehåll med statistik och recensioner -->
+    <div id="medlemssida-huvudinnehall">
+      <!-- profilbild som svävar i mitten ovanför det andra -->
+      <img
+        id="profilbild"
+        src="bilder/kaninprofil.jpg"
+        alt="profilbild kanin"
+        height="640"
+        width="343"
+      />
+
+      <div id="medlemssida-statistikOchRecensioner">
+        <h2>FRASSE FILMFANTAST</h2>
+
+        <!-- sttistiksektion med statistikbilder och filterknappar-->
+        <section id="medlemssida-statistik">
+          <!-- aside med filterknappar -->
+          <aside id="medlemssida-filtrering">
+            <!-- <div class="filter">
+              <div class="filter-button">
+                <label for="Alla">Alla</label>
+                <progress id="Alla" min="0" max="10">3</progress>
+              </div>
+            </div> -->
+          </aside>
+
+          <section id="statistiksektionsbilder">
+            <div class="medlemssida-statistikkort">
+              <!-- siffra på magen -->
+              <div id="medlemssida-statistikkort-siffra-poppe">3,5</div>
+              <img
+                id="poppe"
+                src="bilder/poppeArg.png"
+                alt="popcornsbild med betyg"
+                width="1024"
+                height="1171"
+              />
+            </div>
+
+            <div class="medlemssida-statistikkort">
+              <!-- siffra i kameran -->
+              <div id="medlemssida-statistikkort-siffra-kamera">6</div>
+              <img
+                id="filmkamera"
+                src="bilder/kamera.png"
+                alt="filmkamera med antal filmer"
+                width="151"
+                height="144"
+              />
+            </div>
+
+            <div class="medlemssida-statistikkort">
+              <!-- siffra i tv-apparaten -->
+              <div id="medlemssida-statistikkort-siffra-tv">2</div>
+              <img
+                id="tv"
+                src="bilder/tv.png"
+                alt="tvapparat med betyg"
+                width="151"
+                height="144"
+              />
+            </div>
+          </section>
+        </section>
+
+        <!-- box för recensioner med fyra kolumner i helskärmsläget -->
+        <section id="medlemssida-recensioner">
+          <h2>RECENSIONER</h2>
+
+          <!-- lista med filmer -->
+          <ul id="filmlista"></ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- footer med kontaktuppgifter och bildreferens -->
+    <footer>
+      <div class="footer-kontakt">
+        <div class="footer-ikonochtext">
+          <img src="bilder/telefon.jpg" alt="telefon" width="64" height="64" />
+          <p>073 1112223</p>
+        </div>
+
+        <div class="footer-ikonochtext">
+          <img src="bilder/brev.jpg" alt="brev" width="64" height="64" />
+          <p>info@filmklubb.se</p>
+        </div>
+      </div>
+
+      <!-- separat div för att kunna ange separat stil för sista raden i footern -->
+      <div class="footer-bildreferens">
+        <p>
+          Bilder och ikoner är hämtade från unsplash.com respektive freeicons.io
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/medlemssida/medlemssida.js" defer></script>
+  </body>
+</html>

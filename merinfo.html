@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- importerar ett script från font awesome för att kunna använda ikoner därifrån -->
+    <script
+      src="https://kit.fontawesome.com/7540058e1a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <img
+        src="bilder/uggla.jpg"
+        alt="uggleunge med glasögon"
+        height="612"
+        width="612"
+      />
+      <h1>Cineasternas filmklubb</h1>
+    </header>
+
+    <!-- navigering med länkar till de olika sidorna -->
+    <nav>
+      <ul class="sidolankar">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sokresultat.html">Sökresultat</a></li>
+        <li><a href="merinfo.html">Mer info</a></li>
+        <li><a href="medlemssida.html">Medlemssida</a></li>
+      </ul>
+    </nav>
+
+    <article id="startsida-merinfo">
+      <div class="content">
+        <!-- Sökformulär -->
+        <form class="sokruta" id="merinfo-sokformular">
+          <h2>Sök en film</h2>
+          <input type="text" placeholder="Sök..." name="search" id="sokord" />
+          <!-- Knapp för att skicka -->
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- <article id="startsida-topplista">
+          <h2>Populäraste filmerna just nu</h2>
+          <ul id="top-list"></ul>
+        </article> -->
+
+        <!-- Huvudinnehåll med article för information, aside med bild och
+   formulär för recension -->
+        <div id="merinfo-huvudinnehall">
+          <!-- Article med information -->
+          <article id="merinfo-article"></article>
+
+          <!-- Aside med bild -->
+          <aside id="merinfo-aside"></aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- footer med kontaktuppgifter och bildreferens -->
+    <footer>
+      <div class="footer-kontakt">
+        <div class="footer-ikonochtext">
+          <img src="bilder/telefon.jpg" alt="telefon" width="64" height="64" />
+          <p>073 1112223</p>
+        </div>
+
+        <div class="footer-ikonochtext">
+          <img src="bilder/brev.jpg" alt="brev" width="64" height="64" />
+          <p>info@filmklubb.se</p>
+        </div>
+      </div>
+
+      <!-- separat div för att kunna ange separat stil för sista raden i footern -->
+      <div class="footer-bildreferens">
+        <p>
+          Bilder och ikoner är hämtade från unsplash.com respektive freeicons.io
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/merinfo/merinfo.js" defer></script>
+  </body>
+</html>

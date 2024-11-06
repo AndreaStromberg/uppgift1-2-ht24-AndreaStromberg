@@ -1,0 +1,763 @@
+/* importerar teckensnitt */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* nollställer margin och padding från deafultinställning för att det ska bli enligt inställingarna för varje element nedan */
+*,
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* Ställer in teckensnitt på hela sidan till poppins i första hand.
+  De andra är backup ifall poppins inte fungerar */
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* GRUNDLÄGGANDE REGLER (MOBILSKÄRM)*/
+header {
+  /* Göra en grid-konstruktion för att kunna lägga bilden vid sidan
+    av rubrik och länkar */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #dbdee2;
+
+  padding: 20px;
+}
+
+header > img {
+  height: 75px;
+  width: 75px;
+}
+
+header > h1 {
+  /* ställer line-height till samma som bilden bredvid, för att centrera
+    texten i höjdled i förhållande till bilden. */
+  line-height: 75px;
+
+  font-size: 20px;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-avatar > img {
+  width: 100px;
+  height: 100px;
+}
+
+nav {
+  border: black solid 2px;
+  background-color: #c5d8d1;
+}
+
+ul.sidolankar {
+  list-style-type: none;
+
+  padding-bottom: 10px;
+}
+
+article#startsida-main,
+article#startsida-merinfo {
+  width: 100%;
+  background-color: #f1e3f3;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#sokresultat-huvudinnehall {
+  background-color: #f1e3f3;
+}
+
+.kort-sokresultat {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #c5d8d1;
+  border-radius: 15px;
+}
+
+.kort-sokresultat > h3 {
+  font-size: larger;
+  padding: 20px;
+}
+
+#sokresultat-lista {
+  list-style-type: none;
+}
+
+.filmposter {
+  width: 150px;
+  height: 225px;
+  margin: 10px;
+}
+
+/* #sokresultat-huvudinnehall > article {
+  padding: 20px;
+  border: 1px solid black;
+} */
+
+#merinfo-huvudinnehall {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+#merinfo-ovre-halva {
+  margin-bottom: 2rem;
+}
+
+#merinfo-undre-halva {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#merinfo-bild > img {
+  max-width: 180px;
+  max-height: 270px;
+}
+
+#merinfo-skadespelarlista > ul {
+  list-style: none;
+}
+
+#profilbild {
+  height: 140px;
+  width: 140px;
+  /* centrera bilden */
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: black;
+  /* få bilden att bli rund */
+  border-radius: 50%;
+}
+
+/* <!-- bakgrundsbild som ska täcka hela bakgrunden på huvudinnehållet --> */
+#medlemssida-huvudinnehall {
+  background-image: url("../bilder/bakgrundsbild.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+#medlemssida-statistikOchRecensioner {
+  position: absolute;
+  bottom: 0;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+
+  background-color: black;
+
+  /* margin: 0 auto; */
+  /* margin-left: 150px;
+  margin-right: 150px; */
+
+  padding: 1em 2em 0;
+}
+
+#medlemssida-statistik {
+  border-bottom: 1px solid #dbdee2;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+#medlemssida-filtrering {
+  /* border: 1px solid #dbdee2; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* max-width: 15em; */
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.filter-button {
+  position: relative;
+}
+
+.filter-button {
+  border: 1px solid black;
+}
+
+.filter-button > label {
+  font-size: 1.25rem;
+  position: absolute;
+  left: 40%;
+  top: 0%;
+}
+
+progress[value] {
+  --color: #b45146; /* the progress color */
+  --background: #554a52; /* the background color */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 300px;
+  height: 1.75rem;
+  margin: 0 10px;
+  border-radius: 10em;
+  background: var(--background);
+}
+progress[value].active {
+  outline: 2px solid yellow;
+  /* the progress color */
+  --color: #b45146;
+  /* the background color */
+  --background: #554a52;
+}
+progress[value]::-webkit-progress-bar {
+  border-radius: 10em;
+  background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+  border-radius: 10em;
+  background: var(--color);
+}
+progress[value]::-moz-progress-bar {
+  border-radius: 10em;
+  background: var(--color);
+}
+
+#statistiksektionsbilder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.medlemssida-statistikkort {
+  position: relative;
+}
+
+#medlemssida-statistikkort-siffra-poppe {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  font-weight: 800;
+}
+
+#medlemssida-statistikkort-siffra-kamera {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  font-size: larger;
+  font-weight: 800;
+}
+
+#medlemssida-statistikkort-siffra-tv {
+  position: absolute;
+  top: 43%;
+  left: 38%;
+  font-size: larger;
+  font-weight: 800;
+}
+
+.medlemssida-statistikkort > img {
+  background-color: white;
+  max-width: 151px;
+  max-height: 144px;
+}
+
+#medlemssida-statistikOchRecensioner > h2 {
+  color: white;
+}
+
+#medlemssida-recensioner > h2 {
+  color: white;
+}
+
+.medlemssida-filmkort {
+  max-width: 200px;
+  max-height: 300px;
+}
+
+.medlemssida-filmkort > img {
+  width: 100%;
+  height: 80%;
+}
+
+.uggleikon {
+  background-color: white;
+}
+
+#medlemssida-recensioner {
+}
+
+#medlemssida-statistikOchFilter {
+}
+
+#filmlista {
+  list-style-type: none;
+  display: flex;
+
+  /* flex-wrap gör att antalet kolumner automatiskt ändras beroende på skärmstorlek */
+  flex-wrap: wrap;
+
+  /* flex-start gör att filmerna visas från vänster. Om det t.ex. bara är en film hamnar den längst till vänster. */
+  justify-content: flex-start;
+  gap: 1.5em;
+  margin: 0 auto;
+}
+
+#filmlista > li {
+  color: white;
+}
+
+.medlemssida-filmbetyg {
+  display: flex;
+  justify-content: center;
+  gap: 0.25em;
+}
+
+#surgubbe {
+  font-size: 1.5em;
+  color: red;
+}
+
+/* för att följande label eller inputruta ska ligga på nästa rad ställs in att
+label, input och textarea ska visas som block */
+#merinfo-recensionsformular label,
+#merinfo-recensionsformular input,
+#merinfo-recensionsformular textarea {
+  display: block;
+}
+
+#merinfo-recensionsformular input,
+#merinfo-recensionsformular textarea {
+  margin-bottom: 16px;
+}
+
+#merinfo-recensionsformular input.danger,
+#merinfo-recensionsformular textarea.danger {
+  border: 1px solid red;
+}
+
+#merinfo-recensionsformular label {
+  font-weight: 700;
+  font-size: 16px;
+}
+#merinfo-recensionsformular textarea {
+  width: 100%;
+}
+
+/* https://kevquirk.com/blog/how-to-create-a-simple-html-css-notice-box */
+.notice {
+  background-color: #efefef;
+  border: 3px solid #444;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.notice::before {
+  content: "NOTIS";
+  background: #aaccff;
+  width: 5rem;
+  border-right: 3px solid #444;
+  border-bottom: 3px solid #444;
+  display: block;
+  text-align: center;
+  position: relative;
+  left: -1rem;
+  top: -1rem;
+  padding: 2px 10px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* Style the search field */
+form.sokruta {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+form.sokruta input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #0b7dda;
+}
+
+#merinfo-button-publicera:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.namn-och-varning {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+#varnings-meddelande {
+  color: red;
+  visibility: hidden;
+}
+/* Clear floats */
+form.sokruta::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#startsida-topplista {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+#top-list {
+  list-style: none;
+}
+
+#top-list li,
+#sokresultat-lista li {
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+#top-list li:hover {
+  border: 1px solid black;
+  scale: 101%;
+}
+
+li > .superstort {
+  background-color: #c5d8d1;
+
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+li > .stora {
+  background-color: #c5d8d1;
+
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+li > .lilla {
+  background-color: #dbdee2;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.kort-media-titel-superstort {
+  font-size: 62px;
+  padding-top: 20px;
+}
+
+.kort-media-titel-stora {
+  font-size: 45px;
+  padding-top: 20px;
+}
+
+.kort-media-titel-mindre {
+  padding-top: 20px;
+}
+
+.kort-media-tagline {
+  font-style: italic;
+}
+
+.kort-media-link {
+  text-decoration: none;
+  color: black;
+}
+
+.kort-media {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.kort-media-poster img {
+  width: 100px;
+  height: 150px;
+  margin: 10px;
+}
+
+.kort-media-poster-stora img {
+  width: 150px;
+  height: 225px;
+  margin: 10px;
+}
+
+.kort-media-poster-superstort img {
+  width: 225px;
+  height: 340px;
+  margin: 10px;
+}
+
+#lejonbild {
+  /* Ställer in så att bilden anpassar sig efter skärmens bredd */
+  max-width: 100%;
+  height: auto;
+}
+
+#talgoxebild {
+  height: 200px;
+  width: 200px;
+}
+
+#algbild {
+  height: 200px;
+  width: 200px;
+}
+
+span.date {
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: italic;
+}
+
+section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.kort {
+  padding: 10px;
+}
+
+.kort-titel {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.kort-betygsattingsmodul {
+  padding: 5px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.kort-betygsattingsmodul p {
+  font-weight: 800;
+  padding-bottom: 5px;
+}
+
+button.rosta {
+  width: 1.75em;
+  height: 2.25em;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.rosta.active {
+  border: none;
+  outline: 2px solid red;
+  border: 2px solid yellow;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+button.rosta:hover {
+  scale: 103%;
+}
+
+.rosta_minus_1 {
+  background-color: #ff0000;
+}
+.rosta_1 {
+  background-color: #ff6f00;
+}
+.rosta_2 {
+  background-color: #eaffae;
+}
+.rosta_3 {
+  background-color: #bedd62;
+}
+.rosta_4 {
+  background-color: #90aa45;
+}
+.rosta_5 {
+  background-color: #246a36;
+}
+
+footer {
+  /* gridkonstruktion för att disponera utrymmet i footern */
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  gap: 10px;
+
+  background-color: #dbdee2;
+
+  padding: 20px;
+}
+
+footer > p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-ikonochtext > img {
+  width: 32px;
+  height: 32px;
+
+  /* centrera bilden ovanför texten */
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-kontakt {
+  /* göra så kontaktuppgifterna hamnar bredvid varandra */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* sista raden i footern */
+.footer-bildreferens > p {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* TILLÄMPNINGAR FÖR SURFPLATTESKÄRM */
+@media (min-width: 550px) {
+  header > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  header > h1 {
+    line-height: 100px;
+
+    font-size: 36px;
+  }
+
+  ul.sidolankar {
+    /* lägga länkarna bredvid varandra */
+    display: flex;
+    flex-direction: row;
+
+    /* positionera länkarna */
+    justify-content: space-around;
+    margin: 1em 0 0;
+  }
+}
+
+/* TILLÄMPNINGAR FÖR DATORSKÄRM*/
+@media (min-width: 630px) {
+  /* gridkonstruktion för att få aside att ligga bredvid article */
+}
+
+/* TILLÄMPNINGAR FÖR MINDRE SKÄRMAR MEDLEMSSIDAN */
+@media (max-width: 1120px) {
+  #medlemssida-statistik {
+    /* bilderna på poppe, filmkameran och teven hamnar nedanför filtreringsrutan */
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 835px) {
+  /* bilderna på poppe, filmkameran och teven blir mindre */
+  #tv {
+    height: 100px;
+    width: 110px;
+  }
+
+  #filmkamera {
+    height: 100px;
+    width: 110px;
+  }
+
+  #poppe {
+    height: 100px;
+    width: 110px;
+  }
+}
+
+@media (max-width: 715px) {
+  /* bilderna på poppe, teven och filmkameran hamnar under varandra */
+  #statistiksektionsbilder {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 570px) {
+  /* meters för de olika kategorierna hamnar under radioknappar och lablar */
+  .filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  /* mindre storlek på text */
+  #medlemssida-statistikOchRecensioner > h2 {
+    font-size: medium;
+  }
+
+  #medlemssida-recensioner > h2 {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-button > label {
+    font-size: smaller;
+  }
+
+  #medlemssida-statistikOchRecensioner {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  #medlemssida-statistikOchRecensioner {
+    margin: 5px;
+  }
+}
